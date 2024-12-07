@@ -171,7 +171,7 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 
 ##### 2.2.2. 接続先の設定
 
-`A5:SQL Mk-2`の画面で「データベース(D)」をクリックし、プルダウンから「データベースの追加と削除(D)」を選択します。画面はOracleDBのものになります。
+`A5:SQL Mk-2`の画面で「データベース(D)」をクリックし、プルダウンから「データベースの追加と削除(D)」を選択します。画面はOracleDBのものになります、使用するSQLサーバに合わせて設定は読み替えてください。
 <p align="center">
 <img src="./image/2_2_createConnect2.png" width=80%></br>
 プルダウン表示
@@ -215,23 +215,23 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 </p><br>
 
 接続が完了すると接続先にログインしたユーザ名が表示されるようになります。
-<p/ align="center">
+<p align="center">
 <img src=./image/2_3_executeSql2.png width=80%></br>
 接続先名の横にユーザ名が表示され、ユーザ名と同じスキーマに接続している状態
 </p></br>
 
 `A5:SQL Mk-2`にエクスプローラなどからサンプルSQL（`mihon.sql`）をドロップするなどしてSQLを開きます。</br>
 図中の赤枠部分がログインした接続先と異なる場合は使用する接続先に変更します。
-<p/ align="center">
-<img/ src="./image/2_3_executeSql3.png" width=80%></br>
+<p align="center">
+<img src="./image/2_3_executeSql3.png" width=80%></br>
 サンプルSQLを開いた状態。
 </p></br>
 
 サンプルSQL（`mihon.sql`）の中のいずれかのSQLにカーソルを置いて`Ctrl + Enter`でSQLを実行すると画面下部に結果が表示されます。<br>
 `Ctrl + A`でSQLの全文を選択している状態で`Ctrl + Enter`にてSQLを実行すると3件あるSQLの結果がSQLごとにタブで表示されます。
 
-<p/ align="center">
-<img/ src="./image/2_3_executeSql4.png" width="80%">
+<p align="center">
+<img src="./image/2_3_executeSql4.png" width="80%">
 </p>
 </br>
 全文選択状態でSQLを実行した結果画面
