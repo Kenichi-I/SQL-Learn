@@ -1,0 +1,82 @@
+version: '3'
+services:
+  # PostgreSQL 設定範囲 始まり
+  # PostgreSQLを使用する場合は以下をアンコメントする
+  postgres:
+    image: postgre # イメージの名前
+    #起動するDockerfileのパスを指定
+    build: ./vms/postgresql/
+
+    volumes:
+      # 初期データをマウントする場所
+      - ./vms/postgresql/db-init:/docker-entrypoint-initdb.d
+
+      # ファイルの永続化設定
+      #  この2行の設定を有効にするとコンテナを終了しても
+      #  データやログがファイルとして保存されるため次回の起動でも使用が可能となる。
+      # データディレクトリ
+      # - ./vms/postgresql/data-volume:/var/lib/postgresql/data
+      # ログファイルの保存先(有効にする場合はファイル永続化設定も有効にする。)
+      # - ./vms/postgresql/db-log:/var/log/postgres
+
+    # 外部から接続するポートの設定
+    ports:
+      - 5432:5432
+  # PostgreSQL 設定範囲 終わり
+
+  # MySQL 設定範囲 始まり
+  # MySQLを使用する場合は以下をアンコメントする
+  mysql:
+    image: mysql # イメージの名前
+    #起動するDockerfileのパスを指定
+    build: ./vms/mysql/
+
+    volumes:
+      # 初期データをマウントする場所
+      - ./vms/mysql/db-init:/docker-entrypoint-initdb.d
+
+      # ファイルの永続化設定
+      #  この2行の設定を有効にするとコンテナを終了しても
+      #  データやログがファイルとして保存されるため次回の起動でも使用が可能となる。
+      # データディレクトリ
+      # - ./vms/mysql/data-volume:/var/lib/mysql
+      # ログファイルの保存先(有効にする場合はmy.cnfの関連設定も有効にする。)
+      # - ./vms/mysql/db-log:/var/log/mysql
+
+    ports:
+      - 3306:3306
+  # MySQL 設定範囲 終わり
+
+  # # OracleExpressEdition 設定範囲 始まり
+  # 別途イメージファイルをビルドする必要があるため使用には準備が必要
+  # # Oracleを使用する場合は以下をアンコメントする
+  # oraclexp:
+  #   image: oracle/database:21.3.0-xe
+  #   container_name: oracle21c
+  #   ports:
+  #     - 1521:1521
+  #     - 5500:5500
+  #   expose:
+  #     - 1521
+  #   volumes:
+  #     # 初期データをマウントする場所
+  #     - ./vms/oracle/db-init:/docker-entrypoint-initdb.d/setup
+  #     # コンテナを起動するたびに実行するスクリプトやSQLを格納する。
+  #     # （名前順なのでファイル名の先頭に連番付与が望ましい。）
+  #     - ./vms/oracle/db-update:/docker-entrypoint-initdb.d/startup
+  #     # データ永続化のためデータ領域をマウントする。
+  #     # - ./vms/oracle/data-volume:/opt/oracle/oradata
+  #   environment:
+  #     - TZ=Asia/Tokyo
+  #     - LANGUAGE=ja_JP.ja
+  #     - LANG=ja_JP.UTF-8
+  #     - NLS_LANG=Japanese_Japan.AL32UTF8 # sqlplusの日本語化でこの環境変数が必要になります。
+  #     # - ORACLE_PWD=pa55word # 管理者アカウントのパスワード設定
+  #     - ORACLE_PWD=Passw0rd # 管理者アカウントのパスワード設定
+  #     - ORACLE_SID=XE
+  #     - ORACLE_PDB=XEPDB1 # プラガブル・データベースを設定、こちらを使用する
+  #     # - ORACLE_PDB=oracle
+  # # OracleExpressEdition 設定範囲 終わり
+
+
+

@@ -1,0 +1,22 @@
+[mysqld]
+character-set-server=utf8mb4
+collation-server=utf8mb4_ja_0900_as_cs
+explicit-defaults-for-timestamp=1
+
+#Log
+log-output=FILE
+general_log=1
+slow_query_log=1
+long_query_time=3
+# これらを有効にする場合はdocker-compose.ymlのログの保存先を有効にしておく
+# この設定が無くても/var/lib/mysqlにデフォルト設定でログが出力される。
+#general_log_file=/var/log/mysql/general.log
+#log_error=/var/log/mysql/error.log
+#slow_query_log_file=/var/log/mysql/slow.log
+
+[mysql]
+    
+[client]
+default-character-set=utf8mb4
+port=3306
+socket=/tmp/mysql.sock
