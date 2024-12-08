@@ -198,7 +198,7 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 
 接続が完了するとデータベースに`localhost`が追加されて登録した接続先名が表示されます。
 <p align="center">
-<img src="./image/2_2_createConnect6.png" width=80%><br>
+<img src="./image/2_2_createConnect6.png" width=80%></br>
 デフォルトの接続先名で登録した場合
 </p></br>
 
@@ -210,9 +210,9 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 
 `A5:SQL Mk-2`で左側のデータベースの中から前の項番で登録した接続先をダブルクリックしてログインします。
 <p align="center">
-<img src="./image/2_3_executeSql1.png"><br>
+<img src="./image/2_3_executeSql1.png"></br>
 ログインのダイアログ。「接続」をクリックする。
-</p><br>
+</p></br>
 
 接続が完了すると接続先にログインしたユーザ名が表示されるようになります。
 <p align="center">
@@ -231,10 +231,8 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 `Ctrl + A`でSQLの全文を選択している状態で`Ctrl + Enter`にてSQLを実行すると3件あるSQLの結果がSQLごとにタブで表示されます。
 
 <p align="center">
-<img src="./image/2_3_executeSql4.png" width="80%">
-</p>
-</br>
+<img src="./image/2_3_executeSql4.png" width="80%"></br>
 全文選択状態でSQLを実行した結果画面
-</br>
+</p></br>
 
 SQLの結果が表示されたら動作確認までが完了しています。
