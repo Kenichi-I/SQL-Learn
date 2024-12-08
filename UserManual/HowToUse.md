@@ -210,20 +210,20 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 
 `A5:SQL Mk-2`で左側のデータベースの中から前の項番で登録した接続先をダブルクリックしてログインします。
 <p align="center">
-<img src="./image/2_3_executeSql1.png"></br>
+<img src="./image/2_3_executeSQL1.png"></br>
 ログインのダイアログ。「接続」をクリックする。
 </p></br>
 
 接続が完了すると接続先にログインしたユーザ名が表示されるようになります。
 <p align="center">
-<img src=./image/2_3_executeSql2.png width=80%></br>
+<img src=./image/2_3_executeSQL2.png width=80%></br>
 接続先名の横にユーザ名が表示され、ユーザ名と同じスキーマに接続している状態
 </p></br>
 
 `A5:SQL Mk-2`にエクスプローラなどからサンプルSQL（`mihon.sql`）をドロップするなどしてSQLを開きます。</br>
 図中の赤枠部分がログインした接続先と異なる場合は使用する接続先に変更します。
 <p align="center">
-<img src="./image/2_3_executeSql3.png" width=80%></br>
+<img src="./image/2_3_executeSQL3.png" width=80%></br>
 サンプルSQLを開いた状態。
 </p></br>
 
@@ -231,7 +231,7 @@ SQLクライアントを使用した接続例です。画面は`A5:SQL Mk-2`に�
 `Ctrl + A`でSQLの全文を選択している状態で`Ctrl + Enter`にてSQLを実行すると3件あるSQLの結果がSQLごとにタブで表示されます。
 
 <p align="center">
-<img src="./image/2_3_executeSql4.png" width="80%"></br>
+<img src="./image/2_3_executeSQL4.png" width="80%"></br>
 全文選択状態でSQLを実行した結果画面
 </p></br>
 
